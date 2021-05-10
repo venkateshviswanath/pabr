@@ -8,3 +8,4 @@ step6:unzip the zipped folder and we have .csv file which is dataset
 step6:dataset should be in the same folder, all our folders/environments should be in C drive
 create a file to run code
 finally accuracy for random forest and naive bayes is generated
+see this video https://www.youtube.com/watch?v=pZW8Ry3R1e8
