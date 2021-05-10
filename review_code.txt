@@ -155,3 +155,21 @@ index = random.randrange(dataset.shape[0])
 print('Title :',dataset[0][index],'\nReview :',dataset[1][index],'\nRating :',dataset[2][index])
 print("True value :", dataset[3][index])
 print("Prediction :",classifier.predict(np.append(cv.transform([find_clean_text(dataset[0][index]+' '+dataset[1][index])]).toarray(),[[dataset[3][index]]],axis=1)))
+
+"""Training the Randomforest model on the Training set"""
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix
+
+model=RandomForestClassifier()
+model.fit(X_train1, y_train1)
+
+y_pred=model.predict(X_test1)
+
+print('accuracy : ',accuracy_score(y_train1, classifier.predict(X_train1)))
+
+"""Making Prediction on some reviews from test set"""
+
+index = random.randrange(dataset.shape[0])
+print('Title :',dataset[0][index],'\nReview :',dataset[1][index],'\nRating :',dataset[2][index])
+print("True value :", dataset[3][index])
+print("Prediction :",classifier.predict(np.append(cv.transform([find_clean_text(dataset[0][index]+' '+dataset[1][index])]).toarray(),[[dataset[3][index]]],axis=1)))
